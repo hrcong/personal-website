@@ -5,10 +5,23 @@
 {% endif %}
 
 <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
-<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
-<p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
-  {{ user.bio }}
+
+<h1 ...>
+  {{ site.name | default: user.name | default: user.login }}
+</h1>
+
+<p ...>
+  {{ site.bio | default: user.bio }}
 </p>
+
+<nav class="mt-3">
+  <a class="btn btn-outline mr-2 mb-2" href="{{ '/research/' | relative_url }}">Research</a>
+  <a class="btn btn-outline mr-2 mb-2" href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a class="btn btn-outline mr-2 mb-2" href="{{ '/teaching/' | relative_url }}">Teaching</a>
+  <a class="btn btn-outline mb-2" href="{{ '/cv/' | relative_url }}">CV</a>
+</nav>
+
+
 
 {% if include.metadata %}
   <div class="f4 mb-6">

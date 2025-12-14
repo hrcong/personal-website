@@ -1,3 +1,14 @@
+name: Hongri Cong
+title: Dr. Hongri Cong
+bio: >
+  Lecturer in Statistics & Machine Learning.
+  Research interests include Gaussian Processes, Bayesian Optimization,
+  Monte Carlo methods, and data-driven modeling.
+
+url: https://www.hongricong.com
+avatar: /assets/avatar.jpg
+
+
 layout: sidebar
 style: light
 
@@ -56,3 +67,13 @@ topics:
   - name: Sass
     web_url: https://github.com/topics/sass
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+navigation:
+  - title: Research
+    url: /research
+  - title: Publications
+    url: /publications
+  - title: Teaching
+    url: /teaching
+  - title: CV
+    url: /cv
